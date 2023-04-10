@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Weather</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>Local Weather</h1>
+      <div class="row">
+        <div class="col">
+          <h4>Results for <strong id="city">Regina, Sk</strong></h4>
+          <form id="city-change">
+            <input 
+            type="search" 
+            placeholder="change city" 
+            width="100%" 
+            id="city-search" />
+          </form>
+          <div class="col-3">
+            <form>
+            <input 
+            type="submit"
+            value="search">
+            </form>
+          </div>
+          <div class="col-3">
+            <button>
+              Current
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              <img src="images/suncloud.png" alt="Sunny with clouds" />
+            </div>
+            <div class="col-2">
+              <p class="current">-3°C</p>
+            </div>
+            <div class="col">
+              <p class="condition">
+                Precip: 2% <br />Wind 23 km/h <br />Humidity 68%
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="graphCurrent">
+                <strong>Temp </strong> <span> | </span>
+                <span class="graph">Precip</span> <span> | </span>
+                <span class="graph">Wind</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <p class="date">Saturday, 4:15 p.m.</p>
+              <div class="cloudy">mostly cloudy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p class="forecast">next 7 days</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="future">
+            <div class="day">Sunday</div>
+            <div class="icon">
+              <img src="images/suncloud.png" alt="Sunny with clouds" />
+              <div class="high">-2° <span class="low"> -16° </span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="day">Monday</div>
+          <div class="icon">
+            <img src="images/suncloud.png" alt="Sunny with clouds" />
+          </div>
+          <div class="high">-4° <span class="low"> -22° </span></div>
+        </div>
+        <div class="col">
+          <div class="day">Tuesday</div>
+          <div class="icon"><img src="images/cloudy.png" alt="Cloudy" /></div>
+          <div class="high">-9° <span class="low"> -19° </span></div>
+        </div>
+        <div class="col">
+          <div class="day">Wednesday</div>
+          <div class="icon">
+            <img src="images/suncloud.png" alt="Sunny with clouds" />
+          </div>
+          <div class="high">-12° <span class="low"> -17° </span></div>
+        </div>
+        <div class="col">
+          <div class="day">Thursday</div>
+          <div class="icon"><img src="images/snow.png" alt="Snow" /></div>
+          <div class="high">-9° <span class="low"> -18° </span></div>
+        </div>
+        <div class="col">
+          <div class="day">Friday</div>
+          <div class="icon"><img src="images/cloudy.png" alt="Cloudy" /></div>
+          <div class="high">-9° <span class="low"> -18° </span></div>
+        </div>
+        <div class="col">
+          <div class="day">Saturday</div>
+          <div class="icon">
+            <img src="images/suncloud.png" alt="Sunny with clouds" />
+          </div>
+          <div class="high">-12° <span class="low"> -19° </span></div>
+        </div>
+      </div>
+    </div>
+    <script src=src/index.js></script>
+  </body>
+</html>
